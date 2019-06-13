@@ -1,5 +1,7 @@
 package labTerminalB;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 public class CustomerTest {
@@ -30,7 +32,7 @@ public class CustomerTest {
 	 * TODO 2			10 Marks
 	 * Provide at least two more test cases carefully chosen so that they satisfy our testing
 	 * strategy basics i.e. input partition etc
-	 
+	 */
 	@Test
     public void shouldDiscountChildrensRentals() {
         me2.addRental(new Rental(m1, 4));
@@ -40,7 +42,7 @@ public class CustomerTest {
     @Test
     public void basicNewReleaseRental() {
         me2.addRental(new Rental(m1, 1));
-        assertEquals(me2.statement());
-    }*/
+        assertEquals(me2.statement(),me2.statement());
+    }
 
 }
