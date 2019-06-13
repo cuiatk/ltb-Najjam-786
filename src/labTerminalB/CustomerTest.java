@@ -9,7 +9,7 @@ public class CustomerTest {
 	Customer me2 = new Customer("Allah Ditta");
 	Rental r1 = new Rental(m1, 23);
 	Rental r2 = new Rental(m2,4);
-	
+	 private final Customer customer = new Customer("fred");
 	/**
 	 * Test 1 Customer rented two movies one REGULAR and one NEW_RELEASE
 	 */
@@ -30,7 +30,17 @@ public class CustomerTest {
 	 * TODO 2			10 Marks
 	 * Provide at least two more test cases carefully chosen so that they satisfy our testing
 	 * strategy basics i.e. input partition etc
-	 */
-	
+	 
+	@Test
+    public void shouldDiscountChildrensRentals() {
+        me2.addRental(new Rental(m1, 4));
+        assertEquals(me2.statement(),me2.statement());
+    }
+
+    @Test
+    public void basicNewReleaseRental() {
+        me2.addRental(new Rental(m1, 1));
+        assertEquals(me2.statement());
+    }*/
 
 }
